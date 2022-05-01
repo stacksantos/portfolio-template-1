@@ -3,6 +3,8 @@
   padding: 0;
   font-family: inherit;
 }
+
+
 /* FONTS */
 :root {
   --mainFont: 'Fira Sans Condensed', sans-serif;
@@ -81,7 +83,7 @@
 
 .btn-pill-light {
   width: 10rem;
-  height: 2.9rem;
+  height: 2.5rem;
   color: black;
   padding: 7px 10px;
   font-weight: 500;
@@ -126,7 +128,7 @@
   content: "";
   width: 10rem;
   height: 0.1rem;
-  background-color: var(--primary);
+  background-color: white;
   margin: 0 auto;
 }
 .heading-line::after {
@@ -135,16 +137,19 @@
   content: "";
   width: 2rem;
   height: 0.2rem;
-  background-color: var(--primary);
+  background-color: white;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
 
-/* NAV SECTION */
 
-header,nav,.logoContainer,.navItemContainer,.navItemContainer ul,.navItemContainer li {
+
+
+/* NAV SECTION */
+header,nav,.logoContainer,.navItemContainer,.navItemContainer ul,.navItemContainer li,.innerIntroContainer,.outerIntroContainer,.builtWithContainer h3,.builtWithContainer h4,.servicesContainer,.colLeft, .colRight,.servicesInnerContainer2,.colLeft2, .colRight2 {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 header {
   flex-direction: column;
@@ -158,12 +163,8 @@ nav {
   width: 100%;
   font-family: var(--secondFont);
 }
-.logoContainer{
+.logoContainer,.introLeft {
   padding-left: 10rem;
-}
-.navItemContainer {
-  padding-right: 10rem;
-  font-weight: 200;
 }
 .navItemContainer li {
   color: white;
@@ -176,115 +177,128 @@ nav {
   cursor: pointer;
 }
 
+
 /* INTRO SECTION */
 .outerIntroContainer {
-  display: flex;
   flex-direction: column;
   border-top: 2px solid black;
 }
 .innerIntroContainer {
-  display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: linear-gradient(to right, black, var(--primary));
-  padding-bottom: 7rem;
   padding-top: 3rem;
 }
 .introLeft, .introRight {
   display: flex;
 }
 .introLeft {
-  padding-left: 10rem;
   flex-direction: column;
   width: 50%;
   color: white;
   font-family: var(--secondFont);
 }
-
 #intro {
   font-size: 5rem;
   text-transform: capitalize;
-  padding-bottom: 1.6rem;
+  padding-bottom: 2rem;
   flex-wrap: nowrap;
 }
 #description {
   font-size: 1.5rem;
   font-weight: 200;
-  padding-bottom: 20px;
-}
-.introRight {
-  padding-right: 10rem;
+  padding-bottom: 2rem;
 }
 
 /* BUILT WITH SECTION */
 
 .builtWithContainer h3{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 3px solid white;
   font-weight: 400;
   font-size: 2rem;
   font-family: var(--mainFont)
 }
 .builtWithContainer h4 {
-  display: flex;
-  justify-content: center;
   font-weight: 200;
   font-family: var(--secondFont)
 }
 .builtWithContainer {
-  padding-bottom: 5rem;
+  padding: 0 10rem;
 }
 
-/* SERVICES SECTION */
 
+
+/* SERVICES SECTION */
+.servicesContainer, .servicesInnerContainer2 {
+  background-image: linear-gradient(to right, black, var(--primary));
+}
 .servicesContainer {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  width: 100%;
+  transform: translate(0, -4px);
+  padding-top: 4rem;
 }
 .servicesContainer h2 {
   font-family: var(--secondFont);
   font-size: 3rem;
-  text-transform: capitalize;
-  padding-bottom: 2rem;
+  color: white;
+  padding-bottom: 3rem;
 }
 .servicesInnerContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 70%;
-  padding-bottom: 3rem;
+  justify-content: space-around;
+  width: 60%;
+  padding-bottom: 2rem;
 }
-.servicesLeft, .servicesRight {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.colLeft, .colRight {
+  flex-direction: column;
   width: 50%;
+  color: white;
 }
-.servicesLeft h3{
+.colLeft h3{
   font-family: var(--mainFont);
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.9rem;
   padding-right: .8rem;
   text-transform: capitalize;
-  width: 80%;
+  width: 28rem;
   text-align: center;
 }
-.servicesRight h4{
-  font-weight: 500;
+.colRight h4{
+  font-weight: 400;
   font-family: var(--secondFont);
-  font-size: .8rem;
+  font-size: 1.3rem;
   padding-left: 4.8rem;
-  width: 80%;
+  width: 28rem;
   text-align: center;
 }
 .border-right {
-  border-right: 1px solid black;
+  border-right: 1px solid white;
 }
+.servicesInnerContainer2 {
+  flex-direction: row;
+  width: 100%;
+}
+.colLeft2, .colRight2 {
+  flex-direction: column;
+  width: 30%;
+  padding: 0px 3rem;
+  color: var(--lightYellow);
+}
+.colLeft2 h3 {
+  align-self: flex-start;
+  font-family: var(--mainFont);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.colLeft2 h4 {
+  font-family: var(--secondFont);
+  font-weight: 200;
+}
+
+
+
