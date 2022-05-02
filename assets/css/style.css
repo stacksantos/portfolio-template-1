@@ -15,10 +15,11 @@
 
 :root {
   /* primary colors */
-  --primary: rgb(0, 109, 211);
+  --primary: rgb(0, 18, 66);
+  --secondary: #ffbc03;
   --cyan: rgb(0, 156, 156);
   --lightCyan: rgb(113, 213, 226);
-  --yellow: rgb(255, 208, 0);
+  
   --lightYellow: rgb(252, 236, 183);
   /* mono colors */
   --black: rgb(0, 0, 0);
@@ -82,8 +83,8 @@
 }
 
 .btn-pill-light {
-  width: 10rem;
-  height: 2.5rem;
+  width: 14rem;
+  height: 3.5rem;
   color: black;
   padding: 7px 10px;
   font-weight: 500;
@@ -106,8 +107,8 @@
   border-color: var(--primary);
 }
 .btn-pill-light i {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,12 +142,26 @@
   margin: 0 auto;
   margin-bottom: 1rem;
 }
+.horizontalBorder {
+  display: block;
+  padding-top: .1rem;
+  margin-top: 2rem;
+  content: "";
+  width: 80%;
+  background-color: white;
+}
+.border-right {
+  border-right: 1px solid white;
+}
+
+
+
 
 
 
 
 /* NAV SECTION */
-header,nav,.logoContainer,.navItemContainer,.navItemContainer ul,.navItemContainer li,.innerIntroContainer,.outerIntroContainer,.builtWithContainer h3,.builtWithContainer h4,.servicesContainer,.colLeft, .colRight,.servicesInnerContainer2,.colLeft2, .colRight2 {
+header,nav,.logoContainer,.navItemContainer,.navItemContainer ul,.navItemContainer li,.innerIntroContainer,.outerIntroContainer,.builtWithContainer h3,.builtWithContainer h4,.servicesContainer,.colLeft, .colRight {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,15 +171,23 @@ header {
   justify-content: center;
   width: 100%;
   height: 3.4rem;
-  background-image: linear-gradient(to left, var(--primary), var(--white));
+  background-color: black;
+  /* background-image: linear-gradient(to left, var(--primary), var(--white)); */
 }
 nav {
   justify-content: space-between;
   width: 100%;
   font-family: var(--secondFont);
+  margin-right: 5rem;
 }
-.logoContainer,.introLeft {
-  padding-left: 10rem;
+.logoContainer h2 {
+  min-width: max-content;
+  font-size: 1.5rem;
+  font-family: var(--mainFont);
+  color: white;
+  font-weight: 700;
+  margin-left: 8.5rem;
+  font-style:italic;
 }
 .navItemContainer li {
   color: white;
@@ -178,11 +201,8 @@ nav {
 }
 
 
+
 /* INTRO SECTION */
-.outerIntroContainer {
-  flex-direction: column;
-  border-top: 2px solid black;
-}
 .innerIntroContainer {
   flex-direction: row;
   justify-content: space-evenly;
@@ -212,6 +232,8 @@ nav {
   padding-bottom: 2rem;
 }
 
+
+
 /* BUILT WITH SECTION */
 
 .builtWithContainer h3{
@@ -231,7 +253,7 @@ nav {
 
 
 /* SERVICES SECTION */
-.servicesContainer, .servicesInnerContainer2 {
+.servicesContainer {
   background-image: linear-gradient(to right, black, var(--primary));
 }
 .servicesContainer {
@@ -275,30 +297,23 @@ nav {
   width: 28rem;
   text-align: center;
 }
-.border-right {
-  border-right: 1px solid white;
-}
-.servicesInnerContainer2 {
-  flex-direction: row;
+
+
+
+/* PROJECTS SECTION */
+
+.projectsContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
 }
-.colLeft2, .colRight2 {
-  flex-direction: column;
-  width: 30%;
-  padding: 0px 3rem;
-  color: var(--lightYellow);
-}
-.colLeft2 h3 {
-  align-self: flex-start;
-  font-family: var(--mainFont);
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding-bottom: 1rem;
-}
-.colLeft2 h4 {
+.projectsContainer h3 {
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   font-family: var(--secondFont);
   font-weight: 200;
+  font-size: 2rem;
+
 }
-
-
-
